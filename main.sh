@@ -44,7 +44,7 @@ function connectDB(){ #usage: connect to a selected db .. "use db in mysql"
 	local regex='^[]0-9a-zA-Z,!^`@{}=().;/~_|[-]+$'
 	if [[ $dbname =~ $regex ]]
         then
-			test ! -d dbms/$dbname && printf "Database %s does not exist.\n" $dbname && clickEnter || . ./tablesMenu.sh $dbname;
+			test ! -d dbms/$dbname && printf "Database %s does not exist.\n" $dbname && clickEnter || . tablesMenu.sh $dbname;
         else
 			printf "Database does not exist.\n" 
     fi
@@ -58,10 +58,9 @@ function currLocation(){
 
 function clickEnter(){
 	read -p "Press [Enter] key to continue..." 
-	}
+}
 
 function dropDatabase { #usage: drop a selected db
-
 	read -ep "Enter the database name to drop: " dbname
 	local regex='^[]0-9a-zA-Z,!^`@{}=().;/~_|[-]+$'
 	if [[ $dbname =~ $regex ]]
@@ -79,7 +78,6 @@ function dropDatabase { #usage: drop a selected db
 	
 }
 
-
 function readInput(){
 	echo -n "Choose an option: "
 	read choice
@@ -92,8 +90,6 @@ function readInput(){
 		*) echo "$(tput setaf 1)Sorry, invalid option !$(tput setaf 3)"; clickEnter;;
 	esac
 }
-
-
 
 function showDBMenu(){
     tput setaf 6; #change color to lightblue
