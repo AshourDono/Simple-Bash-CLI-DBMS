@@ -93,6 +93,7 @@ function readInput(){
 
 function showDBMenu(){
     tput setaf 6; #change color to lightblue
+    echo "+---------------------------+"
 	echo "====== Simple Bash DBMS ====="
 	echo "+---------------------------+"
     echo "| 1 - Create Database       |"
