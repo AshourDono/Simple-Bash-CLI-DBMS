@@ -31,7 +31,7 @@ function tablesMenu {
         5) updateTable $dbname;;
         6) selectAllFromTable $dbname ;;
 		7) deleteFromTable $dbname ;;
-        8) ./main.sh ;;
+        8) . main.sh ;;
 		*) echo "Sorry invalid option";;
 	esac
     }
