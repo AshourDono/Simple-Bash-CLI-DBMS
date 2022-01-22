@@ -7,7 +7,6 @@ function createTable {
         echo "Table already Exists!"
     else {
         metaData="";
-        has_pk="";
 
         read -ep "Enter number of columns: " columnsNumber
          
