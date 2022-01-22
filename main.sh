@@ -46,7 +46,7 @@ function connectDB(){ #usage: connect to a selected db .. "use db in mysql"
         then
 			test ! -d dbms/$dbname && printf "Database %s does not exist.\n" $dbname && clickEnter || . tablesMenu.sh $dbname;
         else
-			printf "Database does not exist.\n" 
+			printf "Please enter a valid db name.\n" 
     fi
 	
 }
@@ -92,7 +92,7 @@ function readInput(){
 }
 
 function showDBMenu(){
-    tput setaf 6; #change color to lightblue
+    tput setaf 6; #change color to cyan
     echo "+---------------------------+"
 	echo "====== Simple Bash DBMS ====="
 	echo "+---------------------------+"
@@ -102,7 +102,7 @@ function showDBMenu(){
     echo "| 4 - Drop Database         |"
     echo "| 5 - Exit                  |"
     echo "+---------------------------+"
-    tput setaf 3; #change color to green
+    tput setaf 3; #change color to yellow
 }
 
 
