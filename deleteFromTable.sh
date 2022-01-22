@@ -14,7 +14,7 @@ function deleteFromTable(){
                     
                     while ! [[ $rowNumber =~ ^[1-9]+$ ]]
                         do
-                            echo "please enter a vaild number";
+                            echo "please enter a valid number";
                             read -e rowNumber
                         done
 
@@ -23,7 +23,7 @@ function deleteFromTable(){
                             echo "your number is out of table boundry"
                     else
                         sed -i "${rowNumber}d" dbms/$dbname/$tableName
-                        echo "row deleted successfuly"
+                        echo "row deleted successfully"
                     fi
 
                 else
