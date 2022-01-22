@@ -6,7 +6,7 @@ function updateTable {
   read field
   metaTable="$metaTable$tableName"
   fid=$(awk -F: '{if($1=="'$field'") print NR}'  dbms/$dbname/$metaTable)
-  #fnumber=$(awk -F: '{if($1=="'$fid'") print NR}'  dbms/$dbname/$metaTable)
+  
   if [[ $fid == "" ]]
   then
     echo "Not Found"
@@ -23,7 +23,7 @@ function updateTable {
       echo -e "Enter FIELD name to set: \c"
       read setField
       setFieldNumber=$(awk -F: '{if($1=="'$setField'") print NR}'  dbms/$dbname/$metaTable)
-      #setFidNumber=$(awk 'BEGIN{FS=":"}{for(i=1;i<=NR;i++){if($1=="'$setFid'") print $i}}'  dbms/$dbname/$metaTable)
+    
       if [[ $setField == "" ]]
       then
         echo "Not Found"
