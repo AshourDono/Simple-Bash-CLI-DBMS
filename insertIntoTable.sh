@@ -37,7 +37,7 @@ function insertIntoTable(){
                             done
                         ;;
                     *)
-                        echo "-default case-"
+                        echo "Please check a valid type!"
                     ;;
                 esac
                 if test $currentColumn -eq $numberOfColumns
