@@ -73,7 +73,7 @@ function dropDatabase { #usage: drop a selected db
 				echo "Database $dbname does not exist";
 				fi
         else
-				echo "Database $dbname does not exist";
+				echo "Please enter a valid database name";
     fi
 	
 }
